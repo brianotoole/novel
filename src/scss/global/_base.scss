@@ -1,0 +1,120 @@
+/*********************************************************
+  Base Styling
+*********************************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  background-color: #fff;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &.nav-open {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-size: $font-size;
+  font-family: $font__body;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: $color__text;
+  letter-spacing: .4px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#page {
+  // global WP page wrapper
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+.main-body {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+// page transitions
+.animsition {
+  position: relative;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+// the loading icon wrapper
+.animsition-loading,
+.animsition-loading:after {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+// the loading icon
+.animsition-loading {
+  background-color: transparent;
+  border-top: 2px solid $color__primary;
+  border-right: 2px solid $color__primary;
+  border-bottom: 2px solid $color__primary;
+  border-left: 2px solid #fff;
+  transform: translateZ(0);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 0.8s;
+  animation-name: animsition-loading;
+}
+
+@keyframes animsition-loading {
+  0% {;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation-name: fade-out;
+}

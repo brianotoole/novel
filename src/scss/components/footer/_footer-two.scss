@@ -1,0 +1,129 @@
+/*********************************************************
+  Footer Two
+*********************************************************/
+
+.footer-two {
+  background-color: $color__primary;
+  color: $color__white;
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
+  & a {
+    color: $color__white;
+  }
+
+  .footer__menu-title {
+    color: $color__white;
+    margin-bottom: 20px;
+  }
+
+  .footer__menu-item {
+  }
+  .footer__contact-block {
+    border-top: 1px solid $color__white;
+    border-bottom: 1px solid $color__white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer__logo {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    @media (min-width: $tablet) {
+      flex: 0 0 30%;
+      justify-content: flex-start;
+    }
+  }
+  .footer__contact-info {
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    > div {
+      display: flex;
+      flex: 0 0 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (min-width: $tablet) {
+      display: flex;
+      flex: 0 0 70%;
+      > div {
+        display: flex;
+        flex: 0 0 33%;
+        align-items: flex-start;
+      }
+    }
+  }
+  @media (min-width: $desktop) {
+    .footer__logo {
+      display: flex;
+      flex: 0 0 50%;
+    }
+    .footer__contact-info {
+      display: flex;
+      flex: 0 0 50%;
+      > div {
+        display: flex;
+        flex: 0 0 33%;
+        align-items: flex-start;
+      }
+    }
+  }
+  .footer__copyright {
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+    @media (max-width: $phone) {
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .footer__privacy-section li {
+    display: inline;
+    margin-left: 2px;
+    margin-right: 2px;
+    @media (min-width: $desktop) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  .footer__privacy-section a {
+  }
+  .footer__pivacy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: $phone) {
+      flex-direction: column;
+    }
+  }
+  .footer__block-sec {
+    @media (max-width: $phone) {
+      text-align: center;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    li {
+      margin: 0.25rem 0.25rem 0.25rem 0;
+    }
+    @media (min-width: $tablet) {
+      justify-content: flex-start;
+    }
+  }
+  .social-fill {
+    fill: $color__primary;
+  }
+}

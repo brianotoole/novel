@@ -1,0 +1,52 @@
+.cards {
+  .bg-contain {
+    width: 100%;
+  }
+  .three-up {
+    color: white;
+    text-align: center;
+    li {
+      cursor: default;
+      > div {
+        padding: 3rem 2rem;
+        border-radius: 0.5rem;
+        box-shadow: inset 0 0 0 99999px transparentize($color__primary, 0.3);
+        transition: box-shadow 400ms ease-out;
+        &:hover,
+        &:focus {
+          box-shadow: inset 0 0 0 99999px transparentize($color__primary, 0.1);
+        }
+        hr {
+          margin: 1.25rem 0 0 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .three-up li > div {
+      align-content: center;
+      overflow: hidden;
+      img {
+        width: 8rem;
+        height: 8rem;
+        flex: 0 0 8rem;
+      }
+      .content {
+        max-height: 0%;
+        opacity: 0;
+        transition: max-height 400ms ease-out, opacity 400ms ease-out;
+      }
+      .btn {
+        justify-content: center;
+      }
+      &:hover,
+      &:focus {
+        .content {
+          max-height: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

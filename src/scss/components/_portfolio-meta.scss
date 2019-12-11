@@ -1,0 +1,42 @@
+
+.portfolio-meta {
+  background: $color__primary;
+  color: #fff;
+  width: 100%;
+  margin-top: -5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.portfiolo-meta__type {
+  margin-bottom: 1.25rem;
+  font-size: rem(24);
+}
+
+h1.portfolio-meta__title {
+  margin-top: 0;
+}
+
+.portfiolo-meta__city {
+  font-size: rem(24);
+}
+
+.portfiolo-meta__tags {
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+  display: flex;
+  text-decoration: underline;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+  li {
+    font-size: rem(22);
+    color: #fff;
+    margin-right: 2rem;
+    @media (max-width: $tablet) {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

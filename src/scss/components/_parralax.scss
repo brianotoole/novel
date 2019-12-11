@@ -1,0 +1,174 @@
+.parralax {}
+
+.parralax__col {
+  @media (min-width: $tablet) {
+    padding: 90px;
+  }
+  &--abs {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    right: rem(170); //container lg
+    margin-top: 100px;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media (min-width: $desktop) {
+      display: flex;
+      position: absolute;
+      height: 625px;
+    }
+  }
+  &--transparent {
+    background: transparent;
+  }
+  &--offset {
+    margin-left: 4%;
+  }
+}
+
+.parralax__col-content {
+  font-size: rem(24);
+  @media (min-width: $tablet) {
+    max-width: 400px;
+  }
+  &--padded {
+    max-width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (min-width: $tablet) {
+      padding: 30px;
+    }
+  }
+}
+
+.rectangle {
+  width: 0;
+  padding: 0;
+  color: #fff;
+  background: $color__primary;
+  z-index: 0;
+  &.animated {
+    padding: rem(90);
+    @media (max-width: $tablet) {
+      padding: rem(45);
+    }
+  }
+}
+
+
+.js-reveal {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  &--abs {
+    position: absolute;
+  }
+  &--on-top {
+    z-index: 9;
+  }
+  &--dark {
+    &.animated::before {
+      background: $color__primary!important;
+    }
+  }
+}
+.js-reveal::after,
+.js-reveal::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 101%;
+}
+.js-reveal::after {
+  background: $color__tertiary;
+  z-index: 1;
+}
+.touch .js-reveal::after,
+.touch .js-reveal::before {
+  visibility: hidden;
+}
+.js-reveal.animated::before {
+  background: $color__secondary;
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) both;
+  z-index: 2;
+}
+.js-reveal.animated::after {
+  animation: revealBack 1s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+
+// text
+.js-reveal-text {
+  opacity: 0;
+  transition: opacity 1.25s ease;
+  &.animated {
+    opacity: 1;
+  }
+}
+
+// jarallax
+.jarallax {
+  position: relative;
+  background-repeat: no-repeat;
+  z-index: 0;
+  &--abs {
+    position: absolute;
+  }
+}
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  /* support for plugin https://github.com/bfred-it/object-fit-images */
+  //font-family: 'object-fit: cover;';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.animated {
+  width: 100%;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes revealBack {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes revealVertical {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}

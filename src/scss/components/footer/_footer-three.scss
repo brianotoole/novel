@@ -1,0 +1,48 @@
+/*********************************************************
+  Footer Three
+*********************************************************/
+
+.site-footer-three {
+  padding: 2.5rem 0 2.5rem 0;
+  color: white;
+  background: $color__primary;
+  text-align: center;
+  .site-footer__logo {
+    img {
+      width: 150px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+  a {
+    color: white;
+  }
+  p {
+    margin: 0;
+  }
+  .site-footer__nav {
+    margin: 0.5rem 0;
+    li {
+      display: inline-block;
+      margin: 0.1rem 0.5rem;
+      @media (min-width: $desktop) {
+        margin: 0.1rem 2rem;
+      }
+    }
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    li {
+      margin: 0.25rem;
+    }
+    svg {
+      width: 26px;
+    }
+  }
+
+  .social-fill {
+    fill: $color__primary;
+  }
+}
